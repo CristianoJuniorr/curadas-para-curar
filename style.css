@@ -1377,15 +1377,111 @@ section:not(.hero) {
   }
 }
 
-/* ---------- arte vertical da edição ---------- */
-.galeria__item--poster .gallery-button {
-  background: var(--marrom-escuro);
+/* ---------- hero com a arte oficial da edição ---------- */
+.hero__layout {
+  width: min(1120px, 100%);
+  display: grid;
+  grid-template-columns: minmax(280px, 430px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  margin-top: 1.25rem;
+  text-align: left;
 }
-.galeria__item--poster img {
-  height: 420px;
-  object-fit: contain;
-  background: var(--marrom-escuro);
+
+.hero__poster {
+  position: relative;
+  width: min(100%, 430px);
+  justify-self: center;
+  transform: rotate(-1deg);
 }
-@media (max-width: 720px) {
-  .galeria__item--poster img { height: 460px; }
+
+.hero__poster::after {
+  content: "";
+  position: absolute;
+  inset: 5% -5% -5% 5%;
+  z-index: -1;
+  border: 1px solid rgba(74,52,22,.2);
+  border-radius: 2px;
+  transform: rotate(3deg);
+}
+
+.hero__poster-label {
+  position: absolute;
+  z-index: 3;
+  top: 1rem;
+  left: 1rem;
+  padding: .45rem .7rem;
+  background: rgba(247,241,230,.88);
+  color: var(--marrom-escuro);
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.hero__theme-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 30px 80px rgba(74,52,22,.22);
+}
+
+.hero__content {
+  max-width: 620px;
+}
+
+.hero__theme {
+  margin: 0 0 1rem;
+  color: var(--marrom-escuro);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  font-style: italic;
+}
+
+.hero__theme span {
+  font-style: normal;
+  opacity: .45;
+}
+
+.hero__content .hero__title {
+  margin-bottom: 1rem;
+}
+
+.video-card__media > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #241b0f;
+}
+
+.video-card--vertical .video-card__media {
+  aspect-ratio: 9 / 16;
+  max-height: 650px;
+}
+
+.video-card--vertical .video-card__media > video {
+  object-fit: cover;
+}
+
+@media (max-width: 850px) {
+  .hero__layout {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+    text-align: center;
+  }
+
+  .hero__poster {
+    width: min(78vw, 390px);
+  }
+
+  .hero__content {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .video-card--vertical .video-card__media {
+    max-height: 620px;
+  }
 }
