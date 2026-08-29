@@ -231,8 +231,8 @@ section:not(.hero) {
 /* ---------- galeria ---------- */
 .galeria__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
 }
 .galeria__item {
   margin: 0;
