@@ -1,41 +1,85 @@
-# Site — Curadas para Curar
+# Curadas para Curar — site
 
-Site de apresentação da conferência anual **Curadas para Curar** (Comadesma —
-Nova Olinda, TO). Feito para ser hospedado gratuitamente no **GitHub Pages**.
+Site institucional da conferência anual **Curadas para Curar**, da equipe **Amigas do Céu / AD Comadesma Área 41**, em Nova Olinda — TO.
 
-## Arquivos
+O projeto é estático e pode ser publicado gratuitamente no **GitHub Pages**.
 
-- `index.html` — conteúdo e textos do site
-- `style.css` — cores, fontes e visual
-- `script.js` — efeito de fundo (a página muda de tom conforme rola)
-- `images/` — fotos usadas na galeria
-- `videos/` — arquivos de vídeo usados na seção "Vídeos"
+## Estrutura
 
-## O que trocar a cada edição
+- `index.html` — conteúdo, seções, links e acessibilidade.
+- `style.css` — identidade visual, responsividade e animações.
+- `script.js` — menu mobile, fundo dinâmico, animações de entrada, navegação ativa, botão de voltar ao topo e galeria com lightbox.
+- `images/` — imagens do evento.
+- `videos/` — vídeos opcionais.
 
-Abra o `index.html` num editor de texto (pode ser o próprio site do GitHub) e
-procure pelos comentários `<!-- TROQUE AQUI -->`:
+## O que já foi melhorado
 
-1. **Tema do ano** — título e subtítulo lá no topo (seção Hero)
-2. **Galeria** — dentro de `<section class="galeria">`, duplique um bloco
-   `<figure class="galeria__item">` para cada foto nova e troque o `src` pelo
-   nome do arquivo (que deve estar dentro da pasta `images/`)
-3. **Vídeos** — dentro de `<section class="videos">`. Para trocar um vídeo,
-   coloque o novo arquivo `.mp4` na pasta `videos/` e troque o nome no `src`.
-   Dica: se o arquivo vier do Instagram/celular, ele costuma vir bem pesado —
-   vale comprimir antes de subir (posso ajudar com isso quando precisar)
-4. **Data, edição e local** — dentro de `<section class="info">`
+- Layout visual mais editorial e profissional.
+- Hero com identidade mais forte.
+- Menu responsivo para celular.
+- Animações de entrada com `IntersectionObserver`.
+- Navegação que identifica a seção atual.
+- Galeria com ampliação, navegação por setas e teclado.
+- Seção de vídeos preparada para arquivos `.mp4`.
+- Bloco de data e local com destaque visual.
+- FAQ com `<details>`, sem depender de bibliotecas.
+- Botão flutuante para voltar ao topo.
+- Meta tags para compartilhamento e SEO básico.
+- Respeito à preferência `prefers-reduced-motion`.
+- Estrutura sem frameworks, ideal para GitHub Pages.
 
-Não é necessário mexer no `style.css` nem no `script.js` para atualizar o
-conteúdo de cada edição.
+## Como adicionar fotos
 
-## Como publicar no GitHub Pages
+Coloque as imagens dentro de `images/` e atualize os blocos da seção `#galeria` no `index.html`.
 
-1. Crie um repositório novo no GitHub (ex: `curadas-para-curar`)
-2. Envie estes arquivos para o repositório
-3. Vá em **Settings → Pages**
-4. Em "Branch", selecione `main` e a pasta `/root`, depois clique em **Save**
-5. Em alguns minutos o site estará no ar em:
-   `https://SEU-USUARIO.github.io/curadas-para-curar/`
+Cada item usa:
 
-Se quiser, eu ajudo a fazer esse envio e a configuração do zero.
+```html
+<figure class="galeria__item">
+  <button class="gallery-button" type="button">
+    <img src="images/nova-foto.jpg" alt="Descrição da foto" loading="lazy">
+    <span class="gallery-button__icon" aria-hidden="true">+</span>
+  </button>
+  <figcaption><span>08</span> Descrição</figcaption>
+</figure>
+```
+
+## Como adicionar vídeos
+
+Crie a pasta `videos/`, coloque o `.mp4` e substitua um dos placeholders da seção `#videos` por:
+
+```html
+<div class="video-card__media">
+  <video controls preload="metadata" playsinline poster="images/capa.jpg">
+    <source src="videos/meu-video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+</div>
+```
+
+Para GitHub Pages, prefira vídeos comprimidos e, quando possível, arquivos com tamanho reduzido para não deixar a página pesada.
+
+## Atualização de cada edição
+
+No `index.html`, atualize principalmente:
+
+1. Tema e subtítulo da edição.
+2. Número da edição.
+3. Data.
+4. Local.
+5. Programação.
+6. Fotos e vídeos.
+7. Links oficiais de Instagram/WhatsApp.
+8. Perguntas frequentes, caso as informações mudem.
+
+## Publicação no GitHub Pages
+
+1. Faça commit dos arquivos no repositório.
+2. No GitHub, abra **Settings → Pages**.
+3. Em **Build and deployment**, selecione **Deploy from a branch**.
+4. Escolha a branch `main` e a pasta `/root`.
+5. Salve e aguarde a publicação.
+
+## Observação importante
+
+A página usa os dados que estavam no projeto original: **25 e 26 de outubro**, **6ª edição** e **AD Comadesma Área 41 — Nova Olinda, TO**. Se a data, edição ou local forem alterados oficialmente, atualize esses campos antes de publicar.

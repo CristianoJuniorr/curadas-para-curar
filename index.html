@@ -1,158 +1,380 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curadas para Curar | Comadesma</title>
-<meta name="description" content="Conferência anual Curadas para Curar — um encontro de mulheres em busca de cura, restauração e propósito.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4a3416">
+  <meta name="description" content="Curadas para Curar — conferência anual de mulheres da AD Comadesma Área 41. Um encontro de fé, cura, restauração e propósito.">
+  <meta name="author" content="Amigas do Céu · AD Comadesma Área 41">
 
-<!-- Fontes: Fraunces (títulos), Work Sans (corpo), IBM Plex Mono (rótulos/datas) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Curadas para Curar | Comadesma">
+  <meta property="og:description" content="Uma conferência para mulheres que desejam ser alcançadas por Deus e transformadas para alcançar outras.">
+  <meta property="og:image" content="images/logo-coracao.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-<link rel="stylesheet" href="style.css">
+  <title>Curadas para Curar | Comadesma</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/logo-coracao.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="sky" id="sky" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-<!-- camada de fundo que muda de cor conforme a rolagem (noite -> alvorecer) -->
-<div class="sky" id="sky"></div>
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#topo" aria-label="Curadas para Curar — início">
+      Curadas <span>para Curar</span>
+    </a>
 
-<!-- ============ NAVEGAÇÃO ============ -->
-<header class="nav">
-  <span class="nav__brand">Curadas para Curar</span>
-  <nav class="nav__links">
-    <a href="#sobre">Sobre</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#quando-onde">Quando &amp; Onde</a>
-    <a href="#participar" class="nav__cta">Participe</a>
-  </nav>
-</header>
+    <button class="nav__toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="topo">
-  <p class="eyebrow">Amigas do Céu &middot; AD Comadesma Área 41 apresentam</p>
+    <nav class="nav__links" id="menu" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#quando-onde">Quando &amp; Onde</a>
+      <a href="#perguntas">Dúvidas</a>
+      <a href="#participar" class="nav__cta">Participe</a>
+    </nav>
+  </header>
 
-  <img src="images/logo-coracao.jpg" alt="Logo Curadas para Curar" class="hero__logo">
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="topo">
+      <div class="hero__glow" aria-hidden="true"></div>
 
-  <!-- TROQUE AQUI: título/tema oficial deste ano, quando definido -->
-  <h1 class="hero__title">Curadas para Curar</h1>
+      <p class="eyebrow reveal">Amigas do Céu · AD Comadesma Área 41 apresentam</p>
 
-  <!-- TROQUE AQUI: subtítulo com o tema do ano -->
-  <p class="hero__subtitle">Rejeição &middot; Superação — uma conferência para mulheres que desejam ser alcançadas por Deus e transformadas para alcançar outras.</p>
+      <div class="hero__logo-wrap reveal">
+        <span class="hero__ring hero__ring--one" aria-hidden="true"></span>
+        <span class="hero__ring hero__ring--two" aria-hidden="true"></span>
+        <img src="images/logo-coracao.jpg" alt="Logo da conferência Curadas para Curar" class="hero__logo">
+      </div>
 
-  <div class="hero__actions">
-    <a href="#quando-onde" class="btn btn--primary">Ver programação</a>
-    <a href="https://www.instagram.com/conferencia_curadas_paracurar/" target="_blank" rel="noopener" class="btn btn--ghost">Seguir no Instagram</a>
-  </div>
+      <p class="hero__edition reveal">6ª edição</p>
+      <h1 class="hero__title reveal">Curadas<br><em>para Curar</em></h1>
 
-  <div class="hero__scroll-hint" aria-hidden="true">
-    <span></span>
-    <p>role para conhecer a história</p>
-  </div>
-</section>
+      <p class="hero__subtitle reveal">
+        <strong>Rejeição · Superação</strong><br>
+        Uma conferência para mulheres que desejam ser alcançadas por Deus
+        e transformadas para alcançar outras.
+      </p>
 
-<!-- ============ SOBRE ============ -->
-<section class="sobre" id="sobre">
-  <p class="eyebrow">Sobre o evento</p>
-  <h2>Um plano nascido no coração de Deus</h2>
-  <div class="sobre__grid">
-    <p class="sobre__texto">
-      O Curadas para Curar é um projeto idealizado pela equipe <strong>Amigas do Céu</strong> para
-      alcançar a totalidade do ser feminino — corpo, alma e espírito. Ao longo de cada ciclo, são
-      4 semanas de campanha preparando os corações, seguidas por 2 dias de conferência totalmente
-      voltados para a cura da alma. O tema de cada edição nasce da história de uma mulher da Bíblia,
-      e a missão permanece a mesma: aproximar cada mulher de Deus, fortalecendo sua fé e identidade
-      para vencer as lutas do dia a dia.
-    </p>
-    <blockquote class="sobre__versiculo">
-      "Ele cura os que têm o coração quebrantado e cuida das suas feridas."
-      <cite>Salmos 147:3</cite>
-    </blockquote>
-  </div>
-</section>
+      <div class="hero__actions reveal">
+        <a href="#quando-onde" class="btn btn--primary">Conheça a próxima edição <span>↓</span></a>
+        <a href="https://www.instagram.com/conferencia_curadas_paracurar/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+          Instagram ↗
+        </a>
+      </div>
 
-<!-- ============ GALERIA ============ -->
-<section class="galeria" id="galeria">
-  <p class="eyebrow">Edições anteriores</p>
-  <h2>Momentos que já vivemos</h2>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span></span>
+        <p>role para conhecer a história</p>
+      </div>
+    </section>
 
-  <!--
-    COMO ADICIONAR FOTOS:
-    1. Coloque os arquivos de imagem dentro da pasta /images
-    2. Duplique um bloco <figure class="galeria__item"> abaixo
-    3. Troque o src pelo nome do arquivo e o texto do figcaption
-  -->
-  <div class="galeria__grid">
-    <figure class="galeria__item">
-      <img src="images/galeria-grupo-vestidas.jpg" alt="Grupo de mulheres reunidas na conferência" loading="lazy">
-      <figcaption>Juntas na conferência</figcaption>
-    </figure>
-    <figure class="galeria__item">
-      <img src="images/galeria-louvor.jpg" alt="Mulheres em momento de louvor durante a conferência" loading="lazy">
-      <figcaption>Momento de louvor</figcaption>
-    </figure>
-    <figure class="galeria__item">
-      <img src="images/galeria-ministracao-1.jpg" alt="Ministração durante a conferência" loading="lazy">
-      <figcaption>Ministração</figcaption>
-    </figure>
-    <figure class="galeria__item">
-      <img src="images/galeria-oracao.jpg" alt="Momento de oração entre as participantes" loading="lazy">
-      <figcaption>Momento de oração</figcaption>
-    </figure>
-    <figure class="galeria__item">
-      <img src="images/galeria-adoracao-homem.jpg" alt="Momento de adoração coletiva na conferência" loading="lazy">
-      <figcaption>Adoração</figcaption>
-    </figure>
-    <figure class="galeria__item">
-      <img src="images/galeria-ministracao-2.jpg" alt="Palavra ministrada durante a conferência" loading="lazy">
-      <figcaption>Palavra ministrada</figcaption>
-    </figure>
-    <figure class="galeria__item">
-      <img src="images/galeria-convite-1.jpg" alt="Convite em vídeo para a conferência" loading="lazy">
-      <figcaption>Convite &middot; 6ª edição</figcaption>
-    </figure>
-  </div>
-</section>
+    <!-- ==================== FRASE ==================== -->
+    <section class="manifesto">
+      <div class="manifesto__line" aria-hidden="true"></div>
+      <p class="manifesto__quote">Há feridas que Deus cura em nós para que, através de nós, outras pessoas também encontrem caminho.</p>
+      <p class="manifesto__reference">Curadas para Curar</p>
+    </section>
 
-<!-- ============ QUANDO & ONDE ============ -->
-<section class="info" id="quando-onde">
-  <p class="eyebrow">Próxima edição</p>
-  <h2>Quando &amp; Onde</h2>
-  <div class="info__grid">
-    <div class="info__card">
-      <span class="info__label">Data</span>
-      <!-- TROQUE AQUI -->
-      <span class="info__valor">25 e 26 de outubro</span>
+    <!-- ==================== SOBRE ==================== -->
+    <section class="sobre" id="sobre">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Sobre o evento</p>
+        <h2>Um plano nascido<br><em>no coração de Deus.</em></h2>
+      </div>
+
+      <div class="sobre__grid">
+        <div class="sobre__texto reveal">
+          <p>
+            O <strong>Curadas para Curar</strong> é um projeto idealizado pela equipe
+            <strong>Amigas do Céu</strong> para alcançar a totalidade do ser feminino —
+            corpo, alma e espírito.
+          </p>
+          <p>
+            Ao longo de cada ciclo, são <strong>4 semanas de campanha</strong> preparando
+            os corações, seguidas por <strong>2 dias de conferência</strong> totalmente
+            voltados para a cura da alma.
+          </p>
+          <p>
+            O tema de cada edição nasce da história de uma mulher da Bíblia, e a missão
+            permanece a mesma: aproximar cada mulher de Deus, fortalecendo sua fé e
+            identidade para vencer as lutas do dia a dia.
+          </p>
+        </div>
+
+        <div class="sobre__side reveal">
+          <blockquote class="sobre__versiculo">
+            “Ele cura os que têm o coração quebrantado e cuida das suas feridas.”
+            <cite>Salmos 147:3</cite>
+          </blockquote>
+
+          <div class="sobre__steps">
+            <div>
+              <span>01</span>
+              <p><strong>Preparação</strong><br>4 semanas de campanha</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p><strong>Conferência</strong><br>2 dias de encontro</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p><strong>Propósito</strong><br>Curadas para curar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GALERIA ==================== -->
+    <section class="galeria" id="galeria">
+      <div class="section-heading section-heading--split reveal">
+        <div>
+          <p class="eyebrow">Edições anteriores</p>
+          <h2>Momentos que<br><em>já vivemos.</em></h2>
+        </div>
+        <p class="section-heading__description">Memórias de mulheres reunidas em fé, louvor, oração e comunhão.</p>
+      </div>
+
+      <div class="galeria__grid">
+        <figure class="galeria__item galeria__item--large reveal">
+          <button class="gallery-button" type="button" aria-label="Ampliar foto: Juntas na conferência">
+            <img src="images/galeria-grupo-vestidas.jpg" alt="Grupo de mulheres reunidas na conferência" loading="lazy">
+            <span class="gallery-button__icon" aria-hidden="true">+</span>
+          </button>
+          <figcaption><span>01</span> Juntas na conferência</figcaption>
+        </figure>
+
+        <figure class="galeria__item reveal">
+          <button class="gallery-button" type="button" aria-label="Ampliar foto: Momento de louvor">
+            <img src="images/galeria-louvor.jpg" alt="Mulheres em momento de louvor durante a conferência" loading="lazy">
+            <span class="gallery-button__icon" aria-hidden="true">+</span>
+          </button>
+          <figcaption><span>02</span> Momento de louvor</figcaption>
+        </figure>
+
+        <figure class="galeria__item reveal">
+          <button class="gallery-button" type="button" aria-label="Ampliar foto: Ministração">
+            <img src="images/galeria-ministracao-1.jpg" alt="Ministração durante a conferência" loading="lazy">
+            <span class="gallery-button__icon" aria-hidden="true">+</span>
+          </button>
+          <figcaption><span>03</span> Ministração</figcaption>
+        </figure>
+
+        <figure class="galeria__item reveal">
+          <button class="gallery-button" type="button" aria-label="Ampliar foto: Momento de oração">
+            <img src="images/galeria-oracao.jpg" alt="Momento de oração entre as participantes" loading="lazy">
+            <span class="gallery-button__icon" aria-hidden="true">+</span>
+          </button>
+          <figcaption><span>04</span> Momento de oração</figcaption>
+        </figure>
+
+        <figure class="galeria__item reveal">
+          <button class="gallery-button" type="button" aria-label="Ampliar foto: Adoração">
+            <img src="images/galeria-adoracao-homem.jpg" alt="Momento de adoração coletiva na conferência" loading="lazy">
+            <span class="gallery-button__icon" aria-hidden="true">+</span>
+          </button>
+          <figcaption><span>05</span> Adoração</figcaption>
+        </figure>
+
+        <figure class="galeria__item reveal">
+          <button class="gallery-button" type="button" aria-label="Ampliar foto: Palavra ministrada">
+            <img src="images/galeria-ministracao-2.jpg" alt="Palavra ministrada durante a conferência" loading="lazy">
+            <span class="gallery-button__icon" aria-hidden="true">+</span>
+          </button>
+          <figcaption><span>06</span> Palavra ministrada</figcaption>
+        </figure>
+
+        <figure class="galeria__item galeria__item--wide reveal">
+          <button class="gallery-button" type="button" aria-label="Ampliar foto: Convite da 6ª edição">
+            <img src="images/galeria-convite-1.jpg" alt="Convite da 6ª edição da conferência" loading="lazy">
+            <span class="gallery-button__icon" aria-hidden="true">+</span>
+          </button>
+          <figcaption><span>07</span> Convite · 6ª edição</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================== VÍDEOS ==================== -->
+    <section class="videos" id="videos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experimente um pouco</p>
+        <h2>Vozes, histórias<br><em>e momentos.</em></h2>
+      </div>
+
+      <div class="videos__intro reveal">
+        <p>Vídeos das edições podem ser adicionados aqui para apresentar a atmosfera da conferência.</p>
+        <span>Arraste para assistir</span>
+      </div>
+
+      <!--
+        PARA ADICIONAR UM VÍDEO:
+        1. Crie a pasta /videos no repositório.
+        2. Coloque um arquivo .mp4 nela.
+        3. Duplique o bloco abaixo e troque o src.
+      -->
+      <div class="videos__grid">
+        <article class="video-card reveal">
+          <div class="video-card__media video-card__media--placeholder">
+            <div>
+              <span class="video-card__play">▶</span>
+              <strong>Seu próximo vídeo</strong>
+              <small>Adicione um arquivo em /videos</small>
+            </div>
+          </div>
+          <div class="video-card__caption">
+            <span>Vídeo · 01</span>
+            <strong>Momentos da conferência</strong>
+          </div>
+        </article>
+
+        <article class="video-card reveal">
+          <div class="video-card__media video-card__media--placeholder">
+            <div>
+              <span class="video-card__play">▶</span>
+              <strong>Seu próximo vídeo</strong>
+              <small>Adicione um arquivo em /videos</small>
+            </div>
+          </div>
+          <div class="video-card__caption">
+            <span>Vídeo · 02</span>
+            <strong>Convite ou testemunho</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== QUANDO & ONDE ==================== -->
+    <section class="info" id="quando-onde">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Próxima edição</p>
+        <h2>Quando <em>&amp;</em> Onde</h2>
+      </div>
+
+      <div class="info__layout">
+        <div class="info__main reveal">
+          <div class="date-display">
+            <span class="date-display__number">25 <small>&amp;</small> 26</span>
+            <span class="date-display__month">OUTUBRO</span>
+          </div>
+
+          <div class="info__details">
+            <div class="info__card">
+              <span class="info__label">Edição</span>
+              <span class="info__valor">6ª edição</span>
+            </div>
+            <div class="info__card">
+              <span class="info__label">Local</span>
+              <span class="info__valor">AD Comadesma Área 41</span>
+              <small>Nova Olinda · Tocantins</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="info__aside reveal">
+          <p class="eyebrow">Prepare o coração</p>
+          <h3>Dois dias para estar juntas.</h3>
+          <p>A programação detalhada será divulgada pelos canais oficiais da conferência.</p>
+          <a href="https://www.instagram.com/conferencia_curadas_paracurar/" target="_blank" rel="noopener noreferrer" class="text-link">
+            Acompanhar novidades <span>↗</span>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="participar" id="participar">
+      <div class="participar__ornament" aria-hidden="true">✦</div>
+      <p class="eyebrow reveal">Seu lugar também está aqui</p>
+      <h2 class="reveal">Você é<br><em>convidada.</em></h2>
+      <p class="participar__text reveal">
+        Traga uma amiga, uma irmã, uma vizinha. Ninguém deveria caminhar sozinha até a cura.
+      </p>
+
+      <div class="hero__actions reveal">
+        <a href="https://www.instagram.com/conferencia_curadas_paracurar/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+          Seguir no Instagram ↗
+        </a>
+        <a href="https://wa.me/5563992242285" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq" id="perguntas">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Antes de ir</p>
+        <h2>Perguntas<br><em>frequentes.</em></h2>
+      </div>
+
+      <div class="faq__list">
+        <details class="faq__item reveal">
+          <summary>Quem pode participar?</summary>
+          <p>A conferência é voltada para mulheres. Para informações específicas sobre inscrições e participação, acompanhe os canais oficiais do evento.</p>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>Onde será realizada?</summary>
+          <p>A próxima edição está indicada para a AD Comadesma Área 41, em Nova Olinda, Tocantins.</p>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>Como vou saber da programação?</summary>
+          <p>A programação detalhada será divulgada pelos canais oficiais. Siga o Instagram da conferência para receber as novidades.</p>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>Posso levar outra pessoa?</summary>
+          <p>Sim. A proposta do evento incentiva que você convide uma amiga, irmã ou vizinha para viver esse momento com você.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span>Curadas</span> para Curar
     </div>
-    <div class="info__card">
-      <span class="info__label">Edição</span>
-      <!-- TROQUE AQUI -->
-      <span class="info__valor">6ª edição</span>
+    <p>Equipe Amigas do Céu · AD Comadesma Área 41 · Nova Olinda, TO</p>
+
+    <div class="footer__links">
+      <a href="#topo">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="https://www.instagram.com/conferencia_curadas_paracurar/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
     </div>
-    <div class="info__card">
-      <span class="info__label">Local</span>
-      <!-- TROQUE AQUI -->
-      <span class="info__valor">AD Comadesma Área 41 — Nova Olinda, TO</span>
+
+    <div class="footer__bottom">
+      <span>Curadas para Curar</span>
+      <span>Feito com propósito · 2026</span>
     </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de imagem" hidden>
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Fechar imagem">×</button>
+    <button class="lightbox__prev" id="lightboxPrev" type="button" aria-label="Imagem anterior">‹</button>
+    <figure>
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__next" id="lightboxNext" type="button" aria-label="Próxima imagem">›</button>
   </div>
-</section>
 
-<!-- ============ PARTICIPE / CONTATO ============ -->
-<section class="participar" id="participar">
-  <h2>Você é convidada</h2>
-  <p>Traga uma amiga, uma irmã, uma vizinha. Ninguém deveria caminhar sozinha até a cura.</p>
-  <div class="hero__actions">
-    <a href="https://www.instagram.com/conferencia_curadas_paracurar/" target="_blank" rel="noopener" class="btn btn--primary">Seguir no Instagram</a>
-    <!-- TROQUE AQUI se o número de contato mudar -->
-    <a href="https://wa.me/5563992242285" target="_blank" rel="noopener" class="btn btn--ghost">Falar no WhatsApp</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <p>Curadas para Curar &middot; Equipe Amigas do Céu &middot; AD Comadesma Área 41 &middot; Nova Olinda, TO</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
