@@ -1376,3 +1376,16 @@ section:not(.hero) {
     transform: none;
   }
 }
+
+/* ---------- arte vertical da edição ---------- */
+.galeria__item--poster .gallery-button {
+  background: var(--marrom-escuro);
+}
+.galeria__item--poster img {
+  height: 420px;
+  object-fit: contain;
+  background: var(--marrom-escuro);
+}
+@media (max-width: 720px) {
+  .galeria__item--poster img { height: 460px; }
+}
